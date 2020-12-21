@@ -1,0 +1,127 @@
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-none -a args-none -- -q -f run args-none < /dev/null 2> tests/userprog/args-none.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-single -a args-single -- -q -f run 'args-single onearg' < /dev/null 2> tests/userprog/args-single.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple -- -q -f run 'args-multiple some arguments for you!' < /dev/null 2> tests/userprog/args-multiple.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-many -a args-many -- -q -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v' < /dev/null 2> tests/userprog/args-many.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-dbl-space -a args-dbl-space -- -q -f run 'args-dbl-space two spaces!' < /dev/null 2> tests/userprog/args-dbl-space.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-bad-sp -a sc-bad-sp -- -q -f run sc-bad-sp < /dev/null 2> tests/userprog/sc-bad-sp.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-bad-arg -a sc-bad-arg -- -q -f run sc-bad-arg < /dev/null 2> tests/userprog/sc-bad-arg.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-boundary -a sc-boundary -- -q -f run sc-boundary < /dev/null 2> tests/userprog/sc-boundary.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-boundary-2 -a sc-boundary-2 -- -q -f run sc-boundary-2 < /dev/null 2> tests/userprog/sc-boundary-2.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/halt -a halt -- -q -f run halt < /dev/null 2> tests/userprog/halt.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exit -a exit -- -q -f run exit < /dev/null 2> tests/userprog/exit.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-normal -a create-normal -- -q -f run create-normal < /dev/null 2> tests/userprog/create-normal.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-empty -a create-empty -- -q -f run create-empty < /dev/null 2> tests/userprog/create-empty.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-null -a create-null -- -q -f run create-null < /dev/null 2> tests/userprog/create-null.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-bad-ptr -a create-bad-ptr -- -q -f run create-bad-ptr < /dev/null 2> tests/userprog/create-bad-ptr.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-long -a create-long -- -q -f run create-long < /dev/null 2> tests/userprog/create-long.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-exists -a create-exists -- -q -f run create-exists < /dev/null 2> tests/userprog/create-exists.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-bound -a create-bound -- -q -f run create-bound < /dev/null 2> tests/userprog/create-bound.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run open-normal < /dev/null 2> tests/userprog/open-normal.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-missing -a open-missing -- -q -f run open-missing < /dev/null 2> tests/userprog/open-missing.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run open-boundary < /dev/null 2> tests/userprog/open-boundary.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-empty -a open-empty -- -q -f run open-empty < /dev/null 2> tests/userprog/open-empty.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-null -a open-null -- -q -f run open-null < /dev/null 2> tests/userprog/open-null.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-bad-ptr -a open-bad-ptr -- -q -f run open-bad-ptr < /dev/null 2> tests/userprog/open-bad-ptr.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-twice -a open-twice -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run open-twice < /dev/null 2> tests/userprog/open-twice.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-normal -a close-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run close-normal < /dev/null 2> tests/userprog/close-normal.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-twice -a close-twice -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run close-twice < /dev/null 2> tests/userprog/close-twice.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-stdin -a close-stdin -- -q -f run close-stdin < /dev/null 2> tests/userprog/close-stdin.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-stdout -a close-stdout -- -q -f run close-stdout < /dev/null 2> tests/userprog/close-stdout.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-bad-fd -a close-bad-fd -- -q -f run close-bad-fd < /dev/null 2> tests/userprog/close-bad-fd.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-normal -a read-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run read-normal < /dev/null 2> tests/userprog/read-normal.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-bad-ptr -a read-bad-ptr -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run read-bad-ptr < /dev/null 2> tests/userprog/read-bad-ptr.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run read-boundary < /dev/null 2> tests/userprog/read-boundary.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-zero -a read-zero -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run read-zero < /dev/null 2> tests/userprog/read-zero.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-stdout -a read-stdout -- -q -f run read-stdout < /dev/null 2> tests/userprog/read-stdout.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-bad-fd -a read-bad-fd -- -q -f run read-bad-fd < /dev/null 2> tests/userprog/read-bad-fd.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-normal -a write-normal -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run write-normal < /dev/null 2> tests/userprog/write-normal.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-bad-ptr -a write-bad-ptr -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run write-bad-ptr < /dev/null 2> tests/userprog/write-bad-ptr.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-boundary -a write-boundary -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run write-boundary < /dev/null 2> tests/userprog/write-boundary.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-zero -a write-zero -p ../../tests/userprog/sample.txt -a sample.txt -- -q -f run write-zero < /dev/null 2> tests/userprog/write-zero.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-stdin -a write-stdin -- -q -f run write-stdin < /dev/null 2> tests/userprog/write-stdin.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-bad-fd -a write-bad-fd -- -q -f run write-bad-fd < /dev/null 2> tests/userprog/write-bad-fd.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-once -a exec-once -p tests/userprog/child-simple -a child-simple -- -q -f run exec-once < /dev/null 2> tests/userprog/exec-once.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-arg -a exec-arg -p tests/userprog/child-args -a child-args -- -q -f run exec-arg < /dev/null 2> tests/userprog/exec-arg.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-multiple -a exec-multiple -p tests/userprog/child-simple -a child-simple -- -q -f run exec-multiple < /dev/null 2> tests/userprog/exec-multiple.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-missing -a exec-missing -- -q -f run exec-missing < /dev/null 2> tests/userprog/exec-missing.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-bad-ptr -a exec-bad-ptr -- -q -f run exec-bad-ptr < /dev/null 2> tests/userprog/exec-bad-ptr.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-simple -a wait-simple -p tests/userprog/child-simple -a child-simple -- -q -f run wait-simple < /dev/null 2> tests/userprog/wait-simple.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-twice -a wait-twice -p tests/userprog/child-simple -a child-simple -- -q -f run wait-twice < /dev/null 2> tests/userprog/wait-twice.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-killed -a wait-killed -p tests/userprog/child-bad -a child-bad -- -q -f run wait-killed < /dev/null 2> tests/userprog/wait-killed.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-bad-pid -a wait-bad-pid -- -q -f run wait-bad-pid < /dev/null 2> tests/userprog/wait-bad-pid.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/multi-recurse -a multi-recurse -- -q -f run 'multi-recurse 15' < /dev/null 2> tests/userprog/multi-recurse.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/multi-child-fd -a multi-child-fd -p ../../tests/userprog/sample.txt -a sample.txt -p tests/userprog/child-close -a child-close -- -q -f run multi-child-fd < /dev/null 2> tests/userprog/multi-child-fd.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/rox-simple -a rox-simple -- -q -f run rox-simple < /dev/null 2> tests/userprog/rox-simple.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/rox-child -a rox-child -p tests/userprog/child-rox -a child-rox -- -q -f run rox-child < /dev/null 2> tests/userprog/rox-child.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/rox-multichild -a rox-multichild -p tests/userprog/child-rox -a child-rox -- -q -f run rox-multichild < /dev/null 2> tests/userprog/rox-multichild.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-read -a bad-read -- -q -f run bad-read < /dev/null 2> tests/userprog/bad-read.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-write -a bad-write -- -q -f run bad-write < /dev/null 2> tests/userprog/bad-write.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-read2 -a bad-read2 -- -q -f run bad-read2 < /dev/null 2> tests/userprog/bad-read2.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-write2 -a bad-write2 -- -q -f run bad-write2 < /dev/null 2> tests/userprog/bad-write2.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-jump -a bad-jump -- -q -f run bad-jump < /dev/null 2> tests/userprog/bad-jump.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-jump2 -a bad-jump2 -- -q -f run bad-jump2 < /dev/null 2> tests/userprog/bad-jump2.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-create -a lg-create -- -q -f run lg-create < /dev/null 2> tests/filesys/base/lg-create.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-full -a lg-full -- -q -f run lg-full < /dev/null 2> tests/filesys/base/lg-full.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-random -a lg-random -- -q -f run lg-random < /dev/null 2> tests/filesys/base/lg-random.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-seq-block -a lg-seq-block -- -q -f run lg-seq-block < /dev/null 2> tests/filesys/base/lg-seq-block.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-seq-random -a lg-seq-random -- -q -f run lg-seq-random < /dev/null 2> tests/filesys/base/lg-seq-random.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-create -a sm-create -- -q -f run sm-create < /dev/null 2> tests/filesys/base/sm-create.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-full -a sm-full -- -q -f run sm-full < /dev/null 2> tests/filesys/base/sm-full.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-random -a sm-random -- -q -f run sm-random < /dev/null 2> tests/filesys/base/sm-random.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-seq-block -a sm-seq-block -- -q -f run sm-seq-block < /dev/null 2> tests/filesys/base/sm-seq-block.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-seq-random -a sm-seq-random -- -q -f run sm-seq-random < /dev/null 2> tests/filesys/base/sm-seq-random.errors 
+pintos -v -k -T 300 --filesys-size=2 -p tests/filesys/base/syn-read -a syn-read -p tests/filesys/base/child-syn-read -a child-syn-read -- -q -f run syn-read < /dev/null 2> tests/filesys/base/syn-read.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/syn-remove -a syn-remove -- -q -f run syn-remove < /dev/null 2> tests/filesys/base/syn-remove.errors 
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/syn-write -a syn-write -p tests/filesys/base/child-syn-wrt -a child-syn-wrt -- -q -f run syn-write < /dev/null 2> tests/filesys/base/syn-write.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-empty-name -a dir-empty-name -p tests/filesys/extended/tar -a tar -- -q -f run dir-empty-name < /dev/null 2> tests/filesys/extended/dir-empty-name.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-empty-name.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-empty-name-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-mk-tree -a dir-mk-tree -p tests/filesys/extended/tar -a tar -- -q -f run dir-mk-tree < /dev/null 2> tests/filesys/extended/dir-mk-tree.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-mk-tree.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-mk-tree-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-mkdir -a dir-mkdir -p tests/filesys/extended/tar -a tar -- -q -f run dir-mkdir < /dev/null 2> tests/filesys/extended/dir-mkdir.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-mkdir.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-mkdir-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-open -a dir-open -p tests/filesys/extended/tar -a tar -- -q -f run dir-open < /dev/null 2> tests/filesys/extended/dir-open.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-open.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-open-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-over-file -a dir-over-file -p tests/filesys/extended/tar -a tar -- -q -f run dir-over-file < /dev/null 2> tests/filesys/extended/dir-over-file.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-over-file.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-over-file-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-rm-cwd -a dir-rm-cwd -p tests/filesys/extended/tar -a tar -- -q -f run dir-rm-cwd < /dev/null 2> tests/filesys/extended/dir-rm-cwd.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-rm-cwd.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-rm-cwd-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-rm-parent -a dir-rm-parent -p tests/filesys/extended/tar -a tar -- -q -f run dir-rm-parent < /dev/null 2> tests/filesys/extended/dir-rm-parent.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-rm-parent.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-rm-parent-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-rm-root -a dir-rm-root -p tests/filesys/extended/tar -a tar -- -q -f run dir-rm-root < /dev/null 2> tests/filesys/extended/dir-rm-root.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-rm-root.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-rm-root-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-rm-tree -a dir-rm-tree -p tests/filesys/extended/tar -a tar -- -q -f run dir-rm-tree < /dev/null 2> tests/filesys/extended/dir-rm-tree.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-rm-tree.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-rm-tree-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-rmdir -a dir-rmdir -p tests/filesys/extended/tar -a tar -- -q -f run dir-rmdir < /dev/null 2> tests/filesys/extended/dir-rmdir.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-rmdir.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-rmdir-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/dir-under-file -a dir-under-file -p tests/filesys/extended/tar -a tar -- -q -f run dir-under-file < /dev/null 2> tests/filesys/extended/dir-under-file.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-under-file.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-under-file-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 150 --disk=tmp.dsk -p tests/filesys/extended/dir-vine -a dir-vine -p tests/filesys/extended/tar -a tar -- -q -f run dir-vine < /dev/null 2> tests/filesys/extended/dir-vine.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-vine.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/dir-vine-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-create -a grow-create -p tests/filesys/extended/tar -a tar -- -q -f run grow-create < /dev/null 2> tests/filesys/extended/grow-create.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-create.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-create-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-dir-lg -a grow-dir-lg -p tests/filesys/extended/tar -a tar -- -q -f run grow-dir-lg < /dev/null 2> tests/filesys/extended/grow-dir-lg.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-dir-lg.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-dir-lg-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-file-size -a grow-file-size -p tests/filesys/extended/tar -a tar -- -q -f run grow-file-size < /dev/null 2> tests/filesys/extended/grow-file-size.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-file-size.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-file-size-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-root-lg -a grow-root-lg -p tests/filesys/extended/tar -a tar -- -q -f run grow-root-lg < /dev/null 2> tests/filesys/extended/grow-root-lg.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-root-lg.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-root-lg-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-root-sm -a grow-root-sm -p tests/filesys/extended/tar -a tar -- -q -f run grow-root-sm < /dev/null 2> tests/filesys/extended/grow-root-sm.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-root-sm.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-root-sm-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-seq-lg -a grow-seq-lg -p tests/filesys/extended/tar -a tar -- -q -f run grow-seq-lg < /dev/null 2> tests/filesys/extended/grow-seq-lg.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-seq-lg.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-seq-lg-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-seq-sm -a grow-seq-sm -p tests/filesys/extended/tar -a tar -- -q -f run grow-seq-sm < /dev/null 2> tests/filesys/extended/grow-seq-sm.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-seq-sm.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-seq-sm-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-sparse -a grow-sparse -p tests/filesys/extended/tar -a tar -- -q -f run grow-sparse < /dev/null 2> tests/filesys/extended/grow-sparse.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-sparse.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-sparse-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-tell -a grow-tell -p tests/filesys/extended/tar -a tar -- -q -f run grow-tell < /dev/null 2> tests/filesys/extended/grow-tell.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-tell.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-tell-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/grow-two-files -a grow-two-files -p tests/filesys/extended/tar -a tar -- -q -f run grow-two-files < /dev/null 2> tests/filesys/extended/grow-two-files.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/grow-two-files.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/grow-two-files-persistence.errors pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --disk=tmp.dsk -p tests/filesys/extended/syn-rw -a syn-rw -p tests/filesys/extended/tar -a tar -p tests/filesys/extended/child-syn-rw -a child-syn-rw -- -q -f run syn-rw < /dev/null 2> tests/filesys/extended/syn-rw.errors 
+pintos -v -k -T 60 --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/syn-rw.tar -- -q run 'tar fs.tar /' < /dev/null 2> tests/filesys/extended/syn-rw-persistence.errors
+
+rm -f tmp.dsk
+pintos-mkdisk tmp.dsk --filesys-size=2
+pintos -v -k -T 60 --qemu  --disk=tmp.dsk -p tests/filesys/extended/dir-empty-name -a dir-empty-name -p tests/filesys/extended/tar -a tar -- -q  -f run dir-empty-name
+pintos -v -k -T 60  --qemu --disk=tmp.dsk -g fs.tar -a tests/filesys/extended/dir-empty-name.tar -- -q  run 'tar fs.tar /'
+rm -f tmp.dsk

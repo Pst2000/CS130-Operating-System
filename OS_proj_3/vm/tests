@@ -1,0 +1,111 @@
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-none -a args-none --swap-size=4 -- -q -f run args-none
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-single -a args-single --swap-size=4 -- -q -f run 'args-single onearg'
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-multiple -a args-multiple --swap-size=4 -- -q -f run 'args-multiple some arguments for you!'
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-many -a args-many --swap-size=4 -- -q -f run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/args-dbl-space -a args-dbl-space --swap-size=4 -- -q -f run 'args-dbl-space two spaces!'
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-bad-sp -a sc-bad-sp --swap-size=4 -- -q -f run sc-bad-sp
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-bad-arg -a sc-bad-arg --swap-size=4 -- -q -f run sc-bad-arg
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-boundary -a sc-boundary --swap-size=4 -- -q -f run sc-boundary
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/sc-boundary-2 -a sc-boundary-2 --swap-size=4 -- -q -f run sc-boundary-2
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/halt -a halt --swap-size=4 -- -q -f run halt
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exit -a exit --swap-size=4 -- -q -f run exit
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-normal -a create-normal --swap-size=4 -- -q -f run create-normal
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-empty -a create-empty --swap-size=4 -- -q -f run create-empty
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-null -a create-null --swap-size=4 -- -q -f run create-null
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-bad-ptr -a create-bad-ptr --swap-size=4 -- -q -f run create-bad-ptr
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-long -a create-long --swap-size=4 -- -q -f run create-long
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-exists -a create-exists --swap-size=4 -- -q -f run create-exists
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/create-bound -a create-bound --swap-size=4 -- -q -f run create-bound
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-normal -a open-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run open-normal
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-missing -a open-missing --swap-size=4 -- -q -f run open-missing <
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-boundary -a open-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run open-boundary
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-empty -a open-empty --swap-size=4 -- -q -f run open-empty
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-null -a open-null --swap-size=4 -- -q -f run open-null
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-bad-ptr -a open-bad-ptr --swap-size=4 -- -q -f run open-bad-ptr
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/open-twice -a open-twice -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run open-twice
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-normal -a close-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run close-normal
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-twice -a close-twice -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run close-twice
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-stdin -a close-stdin --swap-size=4 -- -q -f run close-stdin
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-stdout -a close-stdout --swap-size=4 -- -q -f run close-stdout
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/close-bad-fd -a close-bad-fd --swap-size=4 -- -q -f run close-bad-fd
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-normal -a read-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run read-normal
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-bad-ptr -a read-bad-ptr -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run read-bad-ptr
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-boundary -a read-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run read-boundary
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-zero -a read-zero -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run read-zero
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-stdout -a read-stdout --swap-size=4 -- -q -f run read-stdout
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/read-bad-fd -a read-bad-fd --swap-size=4 -- -q -f run read-bad-fd
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-normal -a write-normal -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run write-normal
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-bad-ptr -a write-bad-ptr -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run write-bad-ptr
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-boundary -a write-boundary -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run write-boundary
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-zero -a write-zero -p ../../tests/userprog/sample.txt -a sample.txt --swap-size=4 -- -q -f run write-zero
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-stdin -a write-stdin --swap-size=4 -- -q -f run write-stdin
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/write-bad-fd -a write-bad-fd --swap-size=4 -- -q -f run write-bad-fd
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-once -a exec-once -p tests/userprog/child-simple -a child-simple --swap-size=4 -- -q -f run exec-once
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-arg -a exec-arg -p tests/userprog/child-args -a child-args --swap-size=4 -- -q -f run exec-arg
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-multiple -a exec-multiple -p tests/userprog/child-simple -a child-simple --swap-size=4 -- -q -f run exec-multiple
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-missing -a exec-missing --swap-size=4 -- -q -f run exec-missing
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/exec-bad-ptr -a exec-bad-ptr --swap-size=4 -- -q -f run exec-bad-ptr
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-simple -a wait-simple -p tests/userprog/child-simple -a child-simple --swap-size=4 -- -q -f run wait-simple
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-twice -a wait-twice -p tests/userprog/child-simple -a child-simple --swap-size=4 -- -q -f run wait-twice
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-killed -a wait-killed -p tests/userprog/child-bad -a child-bad --swap-size=4 -- -q -f run wait-killed
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/wait-bad-pid -a wait-bad-pid --swap-size=4 -- -q -f run wait-bad-pid
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/multi-recurse -a multi-recurse --swap-size=4 -- -q -f run 'multi-recurse 15'
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/multi-child-fd -a multi-child-fd -p ../../tests/userprog/sample.txt -a sample.txt -p tests/userprog/child-close -a child-close --swap-size=4 -- -q -f run multi-child-fd
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/rox-simple -a rox-simple --swap-size=4 -- -q -f run rox-simple
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/rox-child -a rox-child -p tests/userprog/child-rox -a child-rox --swap-size=4 -- -q -f run rox-child
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/rox-multichild -a rox-multichild -p tests/userprog/child-rox -a child-rox --swap-size=4 -- -q -f run rox-multichild
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-read -a bad-read --swap-size=4 -- -q -f run bad-read
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-write -a bad-write --swap-size=4 -- -q -f run bad-write
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-read2 -a bad-read2 --swap-size=4 -- -q -f run bad-read2
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-write2 -a bad-write2 --swap-size=4 -- -q -f run bad-write2
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-jump -a bad-jump --swap-size=4 -- -q -f run bad-jump
+pintos -v -k -T 60 --filesys-size=2 -p tests/userprog/bad-jump2 -a bad-jump2 --swap-size=4 -- -q -f run bad-jump2
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-grow-stack -a pt-grow-stack --swap-size=4 -- -q -f run pt-grow-stack
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-grow-pusha -a pt-grow-pusha --swap-size=4 -- -q -f run pt-grow-pusha
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-grow-bad -a pt-grow-bad --swap-size=4 -- -q -f run pt-grow-bad
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-big-stk-obj -a pt-big-stk-obj --swap-size=4 -- -q -f run pt-big-stk-obj
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-bad-addr -a pt-bad-addr --swap-size=4 -- -q -f run pt-bad-addr
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-bad-read -a pt-bad-read -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run pt-bad-read
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-write-code -a pt-write-code --swap-size=4 -- -q -f run pt-write-code
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-write-code2 -a pt-write-code2 -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run pt-write-code2
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/pt-grow-stk-sc -a pt-grow-stk-sc --swap-size=4 -- -q -f run pt-grow-stk-sc
+pintos -v -k -T 300 --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q -f run page-linear
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/page-parallel -a page-parallel -p tests/vm/child-linear -a child-linear --swap-size=4 -- -q -f run page-parallel
+pintos -v -k -T 600 --filesys-size=2 -p tests/vm/page-merge-seq -a page-merge-seq -p tests/vm/child-sort -a child-sort --swap-size=4 -- -q -f run page-merge-seq
+pintos -v -k -T 600 --filesys-size=2 -p tests/vm/page-merge-par -a page-merge-par -p tests/vm/child-sort -a child-sort --swap-size=4 -- -q -f run page-merge-par
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/page-merge-stk -a page-merge-stk -p tests/vm/child-qsort -a child-qsort --swap-size=4 -- -q -f run page-merge-stk
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/page-merge-mm -a page-merge-mm -p tests/vm/child-qsort-mm -a child-qsort-mm --swap-size=4 -- -q -f run page-merge-mm
+pintos -v -k -T 600 --filesys-size=2 -p tests/vm/page-shuffle -a page-shuffle --swap-size=4 -- -q -f run page-shuffle
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-read -a mmap-read -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-read
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-close -a mmap-close -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-close
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-unmap -a mmap-unmap -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-unmap
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-overlap -a mmap-overlap -p tests/vm/zeros -a zeros --swap-size=4 -- -q -f run mmap-overlap
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-twice -a mmap-twice -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-twice
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-write -a mmap-write --swap-size=4 -- -q -f run mmap-write
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-exit -a mmap-exit -p tests/vm/child-mm-wrt -a child-mm-wrt --swap-size=4 -- -q -f run mmap-exit
+pintos -v -k -T 600 --filesys-size=2 -p tests/vm/mmap-shuffle -a mmap-shuffle --swap-size=4 -- -q -f run mmap-shuffle
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-bad-fd -a mmap-bad-fd --swap-size=4 -- -q -f run mmap-bad-fd
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-clean -a mmap-clean -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-clean
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-inherit -a mmap-inherit -p ../../tests/vm/sample.txt -a sample.txt -p tests/vm/child-inherit -a child-inherit --swap-size=4 -- -q -f run mmap-inherit
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-misalign -a mmap-misalign -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-misalign
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-null -a mmap-null -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-null
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-over-code -a mmap-over-code -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-over-code
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-over-data -a mmap-over-data -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-over-data
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-over-stk -a mmap-over-stk -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-over-stk
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-remove -a mmap-remove -p ../../tests/vm/sample.txt -a sample.txt --swap-size=4 -- -q -f run mmap-remove
+pintos -v -k -T 60 --filesys-size=2 -p tests/vm/mmap-zero -a mmap-zero --swap-size=4 -- -q -f run mmap-zero
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-create -a lg-create --swap-size=4 -- -q -f run lg-create
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-full -a lg-full --swap-size=4 -- -q -f run lg-full
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-random -a lg-random --swap-size=4 -- -q -f run lg-random
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-seq-block -a lg-seq-block --swap-size=4 -- -q -f run lg-seq-block
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/lg-seq-random -a lg-seq-random --swap-size=4 -- -q -f run lg-seq-random
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-create -a sm-create --swap-size=4 -- -q -f run sm-create
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-full -a sm-full --swap-size=4 -- -q -f run sm-full
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-random -a sm-random --swap-size=4 -- -q -f run sm-random
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-seq-block -a sm-seq-block --swap-size=4 -- -q -f run sm-seq-block
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/sm-seq-random -a sm-seq-random --swap-size=4 -- -q -f run sm-seq-random
+pintos -v -k -T 300 --filesys-size=2 -p tests/filesys/base/syn-read -a syn-read -p tests/filesys/base/child-syn-read -a child-syn-read --swap-size=4 -- -q -f run syn-read
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/syn-remove -a syn-remove --swap-size=4 -- -q -f run syn-remove
+pintos -v -k -T 60 --filesys-size=2 -p tests/filesys/base/syn-write -a syn-write -p tests/filesys/base/child-syn-wrt -a child-syn-wrt --swap-size=4 -- -q -f run syn-write
+
+pintos -v --gdb --filesys-size=2 -p tests/vm/page-linear -a page-linear --swap-size=4 -- -q -f run page-linear
